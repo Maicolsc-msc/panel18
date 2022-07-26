@@ -72,13 +72,13 @@ function title {
 
 function stop_install {
   [[ ! -e /bin/pweb ]]  && {
-    title "INSTALAÇÃO CANCELADA"
+    title "INSTALACIÓN CANCELADA"
     clear
     cat /dev/null > ~/.bash_history && history -c
     rm /bin/ubuinst* > /dev/null 2>&1
     exit;
  } || {
-    title "INSTALAÇÃO CANCELADA"
+    title "INSTALACION CANCELADA"
     clear
     cat /dev/null > ~/.bash_history && history -c
     rm /bin/ubuinst* > /dev/null 2>&1
@@ -129,28 +129,28 @@ function install_start {
 if [[ -e "/var/www/html/pages/system/pass.php" ]]; then
 clear
 msg -bar
-echo -e "\033[1;31mPAINEL JÁ INSTALDO EM SUA VPS, RECOMENDO\033[0m"
-echo -e "\033[1;31mUMA FORMATAÇÃO PARA UMA NOVA INSTALÇÃO!\033[0m"
+echo -e "\033[1;31mPANEL YA INSTALADO EN TU VPS, TE RECOMIENDO\033[0m"
+echo -e "\033[1;31m¡UN FORMATO PARA UNA NUEVA INSTALACIÓN!\033[0m"
 sleep 5
 systemctl restart apache2 > /dev/null 2>&1
 cat /dev/null > ~/.bash_history && history -c
 rm /bin/ubuinst* > /dev/null 2>&1
 exit;
 else
-  echo -e 'by: @PainelWebAI' >/usr/lib/telegram
-  echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR PAINEL WEB A.I ⚡   \033[1;37m"
+  echo -e 'by: @MSCPERU' >/usr/lib/telegram
+  echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR PANEL WEB MSC ⚡   \033[1;37m"
  echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
-echo -e "\033[1;37m┃[ ! ] ESTA INSTALAÇÃO FORNECE UM CONJUNTO DE FERRAMENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
-echo -e "\033[1;37m┃GESTÃO E IMPLEMENTAÇÃO VPN UTILIZANDO OS SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
-echo -e "\033[1;37m┃[ ! ] O USUÁRIO É RESPONSAVEL A QUALQUER DANO/MÁ UTILIZAÇÃO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
+echo -e "\033[1;37m┃[ ! ] ESTA INSTALACIÓN PROPORCIONA UN CONJUNTO DE HERRAMIENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
+echo -e "\033[1;37m┃GESTIÓN E IMPLEMENTACIÓN DE VPN UTILIZANDO SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
+echo -e "\033[1;37m┃[ ! ] EL USUARIO ES RESPONSABLE DE CUALQUIER DAÑO / MAL USO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
-  echo -ne "┗━┫ VVAMOS INICIAR? [S/N]:"
+  echo -ne "┗━┫ VAMOS INICIAR? [S/N]:"
   read opcion
   [[ "$opcion" != @(s|S) ]] && stop_install
   clear && clear
   os_system
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA   \033[1;37m"
+  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZANDO EL SISTEMA   \033[1;37m"
   msg -bar
   apt install software-properties-common
   apt update -y
@@ -161,7 +161,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   apt upgrade -y
   clear
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ATUALIZAÇÃO DO SISTEMA CONCLUÍDA COM SUCESSO!\033[1;37m"
+  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZACIÓN DEL SISTEMA COMPLETADA CON ÉXITO!\033[1;37m"
   msg -bar
   sleep 3
   clear
@@ -171,21 +171,21 @@ fi
 function install_continue {
   os_system
   msg -bar
-  echo -e "      \e[5m\033[1;100m   INSTALANDO PACOTES PARA O SCRIPT   \033[1;37m"
+  echo -e "      \e[5m\033[1;100m  INSTALACIÓN DE PAQUETES PARA SCRIPT    \033[1;37m"
   msg -bar
   print_center -ama "$distro $vercion"
-  print_center -verd "INSTALANDO DEPENDÊNCIAS"
+  print_center -verd "INSTALANDO DEPENDENCIAS"
   msg -bar3
   dependencias
   msg -bar3
-  print_center -azu "Removendo pacotes obsoletos"
+  print_center -azu "Eliminación de paquetes obsoletos"
   apt autoremove -y &>/dev/null
   sleep 2
   tput cuu1 && tput dl1
   msg -bar
-  print_center -ama "Se algumas das dependências falharem!!!\nQuando terminar, você pode tentar instalar\no mesmo manualmente usando o seguinte comando\napt install nome_do_pacote"
+  print_center -ama "¡¡¡Si algunas de las dependencias fallan!!!\nCuando termines, puedes intentar instalarlo tú mismo manualmente usando el siguiente comando\napt install nome_do_pacote"
   msg -bar
-  read -t 60 -n 1 -rsp $'\033[1;39m       << Pressione enter para continuar >>\n'
+  read -t 60 -n 1 -rsp $'\033[1;39m       << Presione enter para continuar >>\n'
 }
 function install_continue2 {
 cd /bin || exit
@@ -215,16 +215,16 @@ function inst_base {
   msg -bar
   echo -e "\e[1;97m           \e[5m\033[1;100m   SERVIDOR PHP e MYSQL    \033[1;37m"
   msg -bar
-  print_center -ama "Este processo pode ser demorado!.\n"
+  print_center -ama "Este proceso puede llevar mucho tiempo!.\n"
   msg -bar3
-    echo -e "\n\033[1;36mINSTALANDO O APACHE2 \033[1;33mAGUARDE...\033[0m"
+    echo -e "\n\033[1;36mINSTALANDO APACHE2 \033[1;33mESPERE...\033[0m"
 apt install apache2 -y > /dev/null 2>&1
 apt install dirmngr apt-transport-https -y > /dev/null 2>&1
 apt install php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-mcrypt php7.3-curl php7.3-mbstring php7.3-cli -y > /dev/null 2>&1
 systemctl restart apache2 > /dev/null 2>&1
 apt-get install mariadb-server -y > /dev/null 2>&1
 cd || exit
-echo -e "\n\033[1;36mINSTALANDO O MySQL \033[1;33mAGUARDE...\033[0m"
+echo -e "\n\033[1;36mINSTALANDO O MySQL \033[1;33mESPERE...\033[0m"
 mysqladmin -u root password "$pwdroot" > /dev/null 2>&1
 mysql -u root -p"$pwdroot" -e "UPDATE mysql.user SET Password=PASSWORD('$pwdroot') WHERE User='root'" > /dev/null 2>&1
 mysql -u root -p"$pwdroot" -e "FLUSH PRIVILEGES" > /dev/null 2>&1
@@ -281,7 +281,7 @@ if [[ -e "/var/www/html/bdgestorssh.sql" ]]; then
     rm /var/www/html/bdgestorssh.sql > /dev/null 2>&1
 else
     clear
-    echo -e "\033[1;31m ERRO CRÍTICO\033[0m"
+    echo -e "\033[1;31m ERROR CRÍTICO\033[0m"
     sleep 2
     systemctl restart apache2 > /dev/null 2>&1
 cat /dev/null > ~/.bash_history && history -c
@@ -327,28 +327,28 @@ sed -i "s;localhost;$IP;g" /var/www/html/pages/system/config.php > /dev/null 2>&
 clear
 install_start
 IP=$(wget -qO- ipv4.icanhazip.com)
-echo "America/Sao_Paulo" > /etc/timezone > /dev/null 2>&1
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
+echo "America/Lima" > /etc/timezone > /dev/null 2>&1
+ln -fs /usr/share/zoneinfo/America/Lima /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
-echo -e "\E[44;1;37m    INSTALANDO PAINEL    \E[0m"
+echo -e "\E[44;1;37m    INSTALANDO PANEL    \E[0m"
 echo ""
-echo -e "Painel WEB A.I" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "Panel WEB MSC" | figlet
+echo -e "                              \033[1;31mBY@MSCPERU\033[1;36m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/chave") &>/dev/null
 
-read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
+read -p "DIGITE LA CLAVE DE INSTALACION: " key
     
          if [[ "$key" = "$chave" ]]
           then
-               echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
+               echo -e "[*] VALIDANDO LA CLAVE DE INSTALACION"
                 sleep 2
                 echo $key > /bin/chave_inst
-                echo -e "[*] CHAVE ACEITA"
+                echo -e "[*] CLAVE ACEPTADO"
                 sleep 2
             else
-            echo "[-] ESSA CHAVE NÃO É VÁLIDA!"
+            echo "[-] ESA CLAVE NO ES VÁLIDA!"
             sleep 3
             clear
             cat /dev/null > ~/.bash_history && history -c
@@ -376,16 +376,16 @@ install_continue2
 	sed -i "s/#PasswordAuthentication no/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 } > /dev/null
 echo ""
-echo -e "PAINEL WEB A.I" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "PANEL WEB MSC" | figlet
+echo -e "                              \033[1;31mBy @MSCPERU\033[1;36m"
 echo ""
-echo -e "\033[1;36mDEFINA UMA NOVA SENHA PARA\033[0m"
-echo -e "\033[1;36mO USUÁRIO ROOT DA VPS E\033[0m"
-echo -e "\033[1;36mPARA O USUÁRIO DO PHPMYADMIN!\033[0m"
+echo -e "\033[1;36mDEFINA UNA NUEVA CONTRASEÑA PARA\033[0m"
+echo -e "\033[1;36mUSUÁRIO ROOT DE VPS Y \033[0m"
+echo -e "\033[1;36mPARA EL USUÁRIO DE PHPMYADMIN!\033[0m"
 echo ""
-read -p "DIGITE UMA NOVA SENHA ROOT: " pwdroot
+read -p "DIGITE UNA NUEVA CONTRASEÑA ROOT: " pwdroot
 echo "root:$pwdroot" | chpasswd
-echo -e "\n\033[1;36mINICIANDO INSTALAÇÃO \033[1;33mAGUARDE..."
+echo -e "\n\033[1;36mINICIANDO INSTALACIÓN \033[1;33mESPERE..."
 sleep 3
 clear
 inst_base
@@ -398,23 +398,23 @@ tst_bkp
 clear
 sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
 sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
-echo -e "PAINEL WEB A.I" | figlet
-echo -e "                              \033[1;31mBy @PainelWebAI\033[1;36m"
+echo -e "PANEL WEB MSC" | figlet
+echo -e "                              \033[1;31mBy @MSCPERU\033[1;36m"
 echo ""
-echo -e "\033[1;32mPAINEL INSTALADO COM SUCESSO!"
+echo -e "\033[1;32mPANEL INSTALADO CON ÉXITO!"
 echo ""
-echo -e "\033[1;36m SEU PAINEL:\033[1;37m http://$IP/admin\033[0m"
+echo -e "\033[1;36m SU PANEL:\033[1;37m http://$IP/admin\033[0m"
 echo -e "\033[1;36m USUÁRIO:\033[1;37m admin\033[0m"
-echo -e "\033[1;36m SENHA:\033[1;37m admin\033[0m"
+echo -e "\033[1;36m CONTRASEÑA:\033[1;37m admin\033[0m"
 echo ""
-echo -e "\033[1;36m LOJA DE APPS:\033[1;37m http://$IP/apps\033[0m"
+echo -e "\033[1;36m PÁGINA DE APP:\033[1;37m http://$IP/apps\033[0m"
 echo ""
 echo -e "\033[1;36m PHPMYADMIN:\033[1;37m http://$IP/phpmyadmin\033[0m"
 echo -e "\033[1;36m USUÁRIO:\033[1;37m root\033[0m"
-echo -e "\033[1;36m SENHA:\033[1;37m $pwdroot\033[0m"
+echo -e "\033[1;36m CONTRASEÑA:\033[1;37m $pwdroot\033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mpweb\033[0m"
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@PainelWebAI\033[0m"
+echo -e "\033[1;33m MÁS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
 echo ""
 echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar...\033[1;32m! \033[0m"; read
 systemctl restart apache2 > /dev/null 2>&1
