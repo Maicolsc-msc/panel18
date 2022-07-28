@@ -137,7 +137,7 @@ cat /dev/null > ~/.bash_history && history -c
 rm /bin/ubuinst* > /dev/null 2>&1
 exit;
 else
-  echo -e 'by: @MSCPERU' >/usr/lib/telegram
+  echo -e 'ADM: MSCPERU' >/usr/lib/telegram
   echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR PANEL WEB MSC ⚡   \033[1;37m"
  echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
 echo -e "\033[1;37m┃[ ! ] ESTA INSTALACIÓN PROPORCIONA UN CONJUNTO DE HERRAMIENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
@@ -183,14 +183,14 @@ function install_continue {
   sleep 2
   tput cuu1 && tput dl1
   msg -bar
-  print_center -ama "¡¡¡Si algunas de las dependencias fallan!!!\nCuando termines, puedes intentar instalarlo tú mismo manualmente usando el siguiente comando\napt install nome_do_pacote"
+  print_center -ama "¡¡¡Si algunas de las dependencias fallan!!!\nCuando termines, puedes intentar instalarlo tú mismo \nmanualmente usando el siguiente comando\napt install nome_do_pacote"
   msg -bar
   read -t 60 -n 1 -rsp $'\033[1;39m       << Presione enter para continuar >>\n'
 }
 function install_continue2 {
 cd /bin || exit
 rm pweb > /dev/null 2>&1
-wget  https://github.com/SrCarrara/pweb/raw/painel/install/pweb > /dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 clear
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
@@ -246,7 +246,7 @@ curl -sS getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
 chmod +x /usr/local/bin/composer > /dev/null 2>&1
 cd /var/www/html || exit
-wget  https://github.com/Maicolsc-msc/panel18/raw/main/install/gestorssh.zip > /dev/null 2>&1
+wget https://github.com/Maicolsc-msc/panel18/raw/main/install/gestorssh.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer install > /dev/null 2>&1
@@ -334,7 +334,7 @@ clear
 echo -e "\E[44;1;37m    INSTALANDO PANEL    \E[0m"
 echo ""
 echo -e "Panel WEB MSC" | figlet
-echo -e "                              \033[1;31mBY@MSCPERU\033[1;36m"
+echo -e "                              \033[1;31mADM:MSCPERU\033[1;36m"
 echo ""
 chave=$(curl -sSL "raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/chave") &>/dev/null
 
@@ -377,7 +377,7 @@ install_continue2
 } > /dev/null
 echo ""
 echo -e "PANEL WEB MSC" | figlet
-echo -e "                              \033[1;31mBy @MSCPERU\033[1;36m"
+echo -e "                              \033[1;31mADM:MSCPERU\033[1;36m"
 echo ""
 echo -e "\033[1;36mDEFINA UNA NUEVA CONTRASEÑA PARA\033[0m"
 echo -e "\033[1;36mUSUÁRIO ROOT DE VPS Y \033[0m"
@@ -399,7 +399,7 @@ clear
 sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
 sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
 echo -e "PANEL WEB MSC" | figlet
-echo -e "                              \033[1;31mBy @MSCPERU\033[1;36m"
+echo -e "                              \033[1;31mADM:MSCPERU\033[1;36m"
 echo ""
 echo -e "\033[1;32mPANEL INSTALADO CON ÉXITO!"
 echo ""
@@ -414,7 +414,7 @@ echo -e "\033[1;36m USUÁRIO:\033[1;37m root\033[0m"
 echo -e "\033[1;36m CONTRASEÑA:\033[1;37m $pwdroot\033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mpweb\033[0m"
-echo -e "\033[1;33m MÁS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
+echo -e "\033[1;33m MÁS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37mADM: MSCPERU\033[0m"
 echo ""
 echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar...\033[1;32m! \033[0m"; read
 systemctl restart apache2 > /dev/null 2>&1
