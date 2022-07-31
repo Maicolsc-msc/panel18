@@ -183,7 +183,7 @@ function install_continue {
   sleep 2
   tput cuu1 && tput dl1
   msg -bar
-  print_center -ama "¡¡¡Si algunas de las dependencias fallan!!!\nCuando termines, puedes intentar instalarlo tú mismo \nmanualmente usando el siguiente comando\napt install nome_do_pacote"
+  print_center -ama "¡¡¡Si algunas de las dependencias fallan!!!\nCuando termines, puedes intentar instalarlo tú mismo \nmanualmente usando el siguiente comando\napt install nombre_de_paquete"
   msg -bar
   read -t 60 -n 1 -rsp $'\033[1;39m       << Presione enter para continuar >>\n'
 }
