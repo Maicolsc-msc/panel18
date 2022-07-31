@@ -150,7 +150,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   clear && clear
   os_system
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZANDO EL SISTEMA   \033[1;37m"
+  echo -e "\e[1;97m     \e[5m\033[1;100m  ACTUALIZANDO EL SISTEMA   \033[1;37m"
   msg -bar
   apt install software-properties-common
   apt update -y
@@ -161,7 +161,7 @@ echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━�
   apt upgrade -y
   clear
   msg -bar
-  echo -e "\e[1;97m           \e[5m\033[1;100m   ACTUALIZACIÓN DEL SISTEMA COMPLETADA CON ÉXITO!\033[1;37m"
+  echo -e "\e[1;97m     \e[5m\033[1;100m  ACTUALIZACIÓN DEL SISTEMA COMPLETADA CON ÉXITO!\033[1;37m"
   msg -bar
   sleep 3
   clear
