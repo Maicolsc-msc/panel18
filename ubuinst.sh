@@ -140,8 +140,8 @@ else
   echo -e 'ADM: MSCPERU' >/usr/lib/telegram
   echo -e "\e[1;97m           \e[5m\033[1;100m   INSTALADOR PANEL WEB MSC ⚡   \033[1;37m"
  echo -e "\033[1;37m┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m"
-echo -e "\033[1;37m┃[ ! ] ESTA INSTALACIÓN UN CONJUNTO DE HERRAMIENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
-echo -e "\033[1;37m┃IMPLEMENTACIÓN DE VPN UTILIZANDO SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m ┃\E[0m"
+echo -e "\033[1;37m┃[ ! ] ESTA INSTALACIÓN UN CONJUNTO DE HERRAMIENTAS PARA\033[38;5;197m\033[38;5;197m\033[1;37m    ┃\E[0m"
+echo -e "\033[1;37m┃IMPLEMENTACIÓN DE VPN UTILIZANDO SERVIDORES UBUNTU 18\033[38;5;197m\033[38;5;197m\033[1;37m     ┃\E[0m"
 echo -e "\033[1;37m┃[ ! ] EL USUARIO ES RESPONSABLE DE CUALQUIER DAÑO / MAL USO.\033[38;5;197m\033[38;5;197m\033[1;37m  ┃\E[0m"
 echo -e "\033[1;37m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m"
   echo -ne "┗━┫ VAMOS INICIAR? [S/N]:"
