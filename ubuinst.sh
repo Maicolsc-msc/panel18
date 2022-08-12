@@ -196,9 +196,9 @@ clear
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
 cd /bin/ppweb || exit
 rm *.sh ver* > /dev/null 2>&1
-wget  https://github.com/SrCarrara/pweb/raw/painel/install/verifatt.sh > /dev/null 2>&1
-wget  https://github.com/SrCarrara/pweb/raw/painel/install/verpweb > /dev/null 2>&1
-wget  https://github.com/SrCarrara/pweb/raw/painel/install/verweb > /dev/null 2>&1
+wget  https://raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/verifatt.sh > /dev/null 2>&1
+wget  https://raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/verpweb > /dev/null 2>&1
+wget  https://raw.githubusercontent.com/Maicolsc-msc/panel18/main/install/verweb > /dev/null 2>&1
 verp=$(sed -n '1 p' /bin/ppweb/verpweb| sed -e 's/[^0-9]//ig') &>/dev/null
 verw=$(sed -n '1 p' /bin/ppweb/verweb| sed -e 's/[^0-9]//ig') &>/dev/null
 echo -e "$verp" >/bin/ppweb/attpweb
