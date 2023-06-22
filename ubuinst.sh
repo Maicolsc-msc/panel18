@@ -220,7 +220,7 @@ function inst_base {
     echo -e "\n\033[1;36mINSTALANDO APACHE2 \033[1;33mESPERE...\033[0m"
 apt install apache2 -y > /dev/null 2>&1
 apt install dirmngr apt-transport-https -y > /dev/null 2>&1
-apt install php7.3 libapache2-mod-php7.3 php7.3-xml php7.3-mcrypt php7.3-curl php7.3-mbstring php7.3-cli -y > /dev/null 2>&1
+apt install php7.2 libapache2-mod-php7.2 php7.2-xml php7.2-mcrypt php7.2-curl php7.2-mbstring php7.2-cli -y > /dev/null 2>&1
 systemctl restart apache2 > /dev/null 2>&1
 apt-get install mariadb-server -y > /dev/null 2>&1
 cd || exit
@@ -236,11 +236,11 @@ mysql -u root -p"$pwdroot" -e "GRANT ALL PRIVILEGES ON sshplus.* To 'root'@'loca
 mysql -u root -p"$pwdroot" -e "FLUSH PRIVILEGES" > /dev/null 2>&1
 echo '[mysqld]
 max_connections = 10000' >> /etc/mysql/my.cnf
-apt install php7.3-mysql -y > /dev/null 2>&1
+apt install php7.2-mysql -y > /dev/null 2>&1
 phpenmod mcrypt > /dev/null 2>&1
 systemctl restart apache2 > /dev/null 2>&1
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin > /dev/null 2>&1
-apt install php7.3-ssh2 -y > /dev/null 2>&1
+apt install php7.2-ssh2 -y > /dev/null 2>&1
 php -m | grep ssh2 > /dev/null 2>&1
 curl -sS getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
@@ -396,8 +396,8 @@ cron_set
 fun_swap
 tst_bkp
 clear
-sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
-sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/7.3/apache2/php.ini > /dev/null 2>&1
+sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 256M;g" /etc/php/7.2/apache2/php.ini > /dev/null 2>&1
+sed -i "s;post_max_size = 8M;post_max_size = 256M;g" /etc/php/7.2/apache2/php.ini > /dev/null 2>&1
 echo -e "PANEL WEB MSC" | figlet
 echo -e "                              \033[1;31mADM:MSCPERU\033[1;36m"
 echo ""
